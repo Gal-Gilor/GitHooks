@@ -1,14 +1,10 @@
-#!/usr/bin/env bash
-
-LC_ALL=C
+#!/bin/sh
 
 branch="$(git rev-parse --abbrev-ref HEAD)"
 
-valid_regex="^(develop|master|release)\/[a-z0-9._-]+$"
+valid_regex="^\w+$"
 
-if [[ ! $branch =~ $valid_regex ]]
-
-then
+if ! [[ $branch =~ $valid_regex ]]; then
 
 	echo "Your commit was rejected due to branch name"
 	
@@ -17,5 +13,3 @@ then
 	exit 1
 
 fi
-
-exit 0
