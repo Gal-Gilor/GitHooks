@@ -1,0 +1,2 @@
+# GitHooks
+pre-commit
