@@ -137,3 +137,6 @@ lfw/
 
 # pickle
 *.pkl
+
+# config
+config.py
